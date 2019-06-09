@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/wordcount.css' %}">
+    </head>
+    <body>
+        <h1>WORD COUNT</h1>
+
+        <a href="{% url 'about' %}">ABOUT</a>
+
+        <form action="{% url 'count' %}">
+            <textarea cols="40" rows="10" name="fulltext"></textarea>
+            <br>
+            <input type="submit" value="Count!" />
+        </form>
+        <img src="{% static 'image/blueberry.jpg' %}" alt="">
+    </body>
+</html> 
